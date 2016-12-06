@@ -2,12 +2,15 @@ html,body{
   margin:0;
   padding:0;
 }
+body{
+	font-size: 100%;
+}
 .flexbox{
   position:absolute;
   background:black;
   width:100%;
+  min-width: 1800px;
   height:100%;
-
   display: flex;
   flex-direction:column;
 }
@@ -80,9 +83,9 @@ nav li a{
 }
 #inputtext{
 	border-radius: 5px;
-	font-size: 1.2em;
+	font-size: 1.1em;
 	font-family: arial;
-	padding: 2% 18% 2% 2%;
+	padding: 2% 15% 2% 2%;
 }
 #submitbutton{
 	border-radius: 5px;
