@@ -1,0 +1,178 @@
+html,body{
+  margin:0;
+  padding:0;
+}
+.flexbox{
+  position:absolute;
+  background:black;
+  width:100%;
+  height:100%;
+
+  display: flex;
+  flex-direction:column;
+}
+
+.flex{
+  background:blue;
+  flex:1;
+  display:flex;
+}
+
+.flex-child1{
+  background:#2B2F3E;
+  width:20%;
+  display:block;
+}
+.flex-child2{
+  background:#F9F9F9;
+  width:40%;
+  display:block;
+}
+.flex-child3{
+  background:#F9F9F9;
+  width:40%;
+  display:block;
+}
+nav header{
+	padding: 7% 1.2% 15% 9%;
+	font-size: 3em;
+	font-family: 'Assistant', arial;
+	color: grey;
+	font-weight: normal;
+}
+nav ul {
+	background-color:#FF3753;
+	padding: 5% 10% 5%;
+}
+nav li{
+	list-style:none;
+	color: #fff;
+	font-size: 1.5em;
+	font-family: 'Assistant', arial;
+	font-weight: normal;
+}
+nav li a{
+	margin: 0;
+	text-decoration:none;
+	color: #fff;
+}
+.items{
+	margin: 2em 1em 0 2em;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 5px;
+	padding: 0 4% 30% 5%;
+	font-size: 1.2em;
+	font-family: arial;
+	font-weight: lighter;
+	background:white;
+}
+.items h2{
+	font-size: 2.5em;
+	font-family: 'Assistant', arial;
+	font-weight: lighter;
+	color: grey;
+}
+.items hr{
+	border-color:#F2F2F2;
+	border-width: 0.5px;
+	border-style:solid;
+}
+#inputtext{
+	border-radius: 5px;
+	font-size: 1.2em;
+	font-family: arial;
+	padding: 2% 18% 2% 2%;
+}
+#submitbutton{
+	border-radius: 5px;
+	font-size: 1.2em;
+	font-family: arial;
+	color: white;
+	background-color:#27CCC0;
+	padding: 2.2% 8% 2.2% 9%;
+	border-width: 0px;
+}
+.items a{
+	text-decoration:none;
+	display: inline-block;
+	color: black;
+}
+.items button{
+	float:right;
+	border-radius: 5px;
+	font-size: 1em;
+	font-family: arial;
+	color: red;
+	background-color:white;
+	border-color:red;
+	padding: 2% 5% 2% 5%;
+	margin-top: 2%;
+	border-style: solid;
+}
+#commentsnumb {
+	display: inline-block;
+	border-radius: 17px;
+	background-color:#27CCC0;
+	padding: 1% 2.5% 1% 2.5%;
+	color: white;
+}
+.items a:hover{
+    color: #0000FF;
+}
+.items a:active {
+    color: #0000FF;
+}
+.comments {
+	padding-bottom: 4%;
+}
+.image {
+	 width:12%;
+	 display: inline-block;
+	 vertical-align:top;
+}
+.commentitems {
+	 width:86%;
+	 display: inline-block;
+	 font-size: 0.8em;
+     top: 0px;
+	 vertical-align:top;
+}
+.rectangle{
+	height: 65px;
+    width: 65px;
+	/*background-color:#34fed2;*/
+}
+.setcomment .rectangle{
+	background-color: #f0f5f5;
+}  
+ textarea{
+	width:85%;
+	display: inline-block;
+	font-size: 0.8em;
+	font-family: arial;
+}
+
+.comments .ng-scope:nth-child(odd) .rectangle{
+	background-color:#47568C;
+}
+.comments .ng-scope:nth-child(even) .rectangle{
+	background-color:#FF8A00;
+}
+
+.selected-product {
+	border-left: 6px solid red;
+	margin-left: -40px;
+	padding-left: 34px;
+}
+
+.setcomment {
+	margin-top: 2%;
+}
+textarea {
+	resize: none;
+}
+.commentpanel {
+	border-bottom: 1px solid #F2F2F2;
+	padding: 3% 0 3%;
+}

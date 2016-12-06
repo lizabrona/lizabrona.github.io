@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app = "womQuality">
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link href="https://fonts.googleapis.com/css?family=Assistant:300" rel="stylesheet">
+		<script type="text/javascript" src="angular.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</head>
+	<body>
+	<div class="flexbox">
+	<div class="flex">
+		<div class="flex-child1">
+			<nav>
+				<header>Main
+				</header>
+				<ul>
+					<li class="selected"><a href>Overview</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!--Items section--> 
+		<div class="flex-child2" ng-controller = "QualityController as quality">
+			<section class="items"> 
+			<h2>Items</h2>
+			<form name="qualityForm" ng-controller="AddController as addCtrl" ng-submit="qualityForm.$valid && addCtrl.addItem()">
+				<input id="inputtext" ng-model="addCtrl.item.name" type="text" placeholder="Type name here..." required>
+				<input id="submitbutton" type="submit" value="Add new" />
+				<h3>{{addCtrl.item.name}}</h3>
+				<!--<em>{{addCtrl.item.comments}}</em>-->
+				<br>
+			</form>
+			<div  ng-repeat="product in quality.products" ng-class="{'selected-product': quality.current==product}"> 
+				<a href ng-click="quality.showComment(product)"><h3>{{product.name}}</h3></a>
+				<div id="commentsnumb">{{product.comments.length}}</div>
+				<button ng-click="quality.deleteItem(product)">Delete</button>
+				<hr>
+			</div>
+			</section>
+		</div>
+		<!--Comments section--> 
+		<div class="flex-child3" ng-controller = "CommentController as panel">
+			<section class="items comments">
+				<h2>Comments</h2>
+				<div class="commentpanel" ng-repeat="comment in panel.comments">
+					<span class="image"> <div class="rectangle"></div>
+					</span>
+					<div class="commentitems">{{comment}}</div>
+					<br>
+				</div>
+				<div class="setcomment">
+					<span class="image"> <div class="rectangle"></div>
+					</span>
+					<textarea ng-model="panel.item" rows="4" ng-keypress="($event.which === 13)?panel.addItem():0">
+					</textarea>
+				</div>
+			</section>
+		</div>
+	</div>
+	</div>	
+	</body>
+</html>
